@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://n0xoexwsohn5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cj0n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
+size = Vector2(574, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cj0n"]
+size = Vector2(5, 523)
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 646.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+color = Color(0.08280001, 0.08770667, 0.23, 1)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 287.0
+offset_top = 51.0
+offset_right = 861.0
+offset_bottom = 574.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8cj0n")
+
+[node name="Boundaries" type="Node" parent="."]
+
+[node name="top" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/top"]
+position = Vector2(574, 53.5)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="bottom" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/bottom"]
+position = Vector2(574, 571.5)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="Left" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left"]
+position = Vector2(289.5, 312.5)
+shape = SubResource("RectangleShape2D_8cj0n")
+
+[node name="Right" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right"]
+position = Vector2(858.5, 312.5)
+shape = SubResource("RectangleShape2D_8cj0n")
