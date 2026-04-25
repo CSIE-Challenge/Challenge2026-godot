@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://n0xoexwsohn5"]
+[gd_scene load_steps=5 format=3 uid="uid://n0xoexwsohn5"]
+
+[ext_resource type="PackedScene" uid="uid://bo8c04xo40bla" path="res://scenes/player.tscn" id="1_uwrxv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cj0n"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -8,25 +10,28 @@ border_width_right = 5
 border_width_bottom = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
-size = Vector2(574, 5)
+size = Vector2(944, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cj0n"]
-size = Vector2(5, 523)
+size = Vector2(5, 914)
 
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="ColorRect" parent="."]
-offset_right = 1150.0
-offset_bottom = 646.0
+offset_left = 1.0
+offset_right = 1920.0
+offset_bottom = 1090.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 color = Color(0.08280001, 0.08770667, 0.23, 1)
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 287.0
-offset_top = 51.0
-offset_right = 861.0
-offset_bottom = 574.0
+offset_left = 522.0
+offset_top = 70.0
+offset_right = 1466.0
+offset_bottom = 984.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_8cj0n")
 
 [node name="Boundaries" type="Node" parent="."]
@@ -34,23 +39,26 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8cj0n")
 [node name="top" type="StaticBody2D" parent="Boundaries"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/top"]
-position = Vector2(574, 53.5)
+position = Vector2(994.5, 72.5)
 shape = SubResource("RectangleShape2D_uwrxv")
 
 [node name="bottom" type="StaticBody2D" parent="Boundaries"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/bottom"]
-position = Vector2(574, 571.5)
+position = Vector2(994, 981.5)
 shape = SubResource("RectangleShape2D_uwrxv")
 
 [node name="Left" type="StaticBody2D" parent="Boundaries"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left"]
-position = Vector2(289.5, 312.5)
+position = Vector2(524.5, 527)
 shape = SubResource("RectangleShape2D_8cj0n")
 
 [node name="Right" type="StaticBody2D" parent="Boundaries"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right"]
-position = Vector2(858.5, 312.5)
+position = Vector2(1463.5, 527)
 shape = SubResource("RectangleShape2D_8cj0n")
+
+[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(980, 338)
