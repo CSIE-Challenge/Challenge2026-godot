@@ -215,7 +215,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(11, 16)
+size = Vector2(11, 5)
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(4, 4)
@@ -228,5 +228,5 @@ sprite_frames = SubResource("SpriteFrames_ujl30")
 animation = &"walk_down_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, 5.5)
 shape = SubResource("RectangleShape2D_g2els")
