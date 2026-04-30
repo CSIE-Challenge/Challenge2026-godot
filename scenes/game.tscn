@@ -1,7 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://n0xoexwsohn5"]
 
-[ext_resource type="Script" uid="uid://dwts357eee5ev" path="res://scenes/game.gd" id="1_lnu2h"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bo8c04xo40bla" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" path="res://scenes/trap.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dv3wbu2kgn81u" path="res://scenes/trap.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://dmq0pbww27rb2" path="res://scenes/trap_spawner.gd" id="4_lbhrr"]
 
@@ -36,6 +37,14 @@ offset_bottom = 984.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_8cj0n")
+
+[node name="EnergyBallCounter" type="Label" parent="."]
+offset_left = 522.0
+offset_top = 28.0
+offset_right = 865.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 28
+text = "Energy Balls: 0"
 
 [node name="Boundaries" type="Node" parent="."]
 
