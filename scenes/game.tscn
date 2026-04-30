@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://n0xoexwsohn5"]
+[gd_scene load_steps=8 format=3 uid="uid://n0xoexwsohn5"]
 
 [ext_resource type="Script" uid="uid://dwts357eee5ev" path="res://scenes/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bo8c04xo40bla" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dv3wbu2kgn81u" path="res://scenes/trap.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://dmq0pbww27rb2" path="res://scenes/trap_spawner.gd" id="4_lbhrr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cj0n"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -68,3 +69,14 @@ collision_layer = 2
 
 [node name="Trap" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(556, 779)
+
+[node name="TrapSpawner" type="Node2D" parent="."]
+position = Vector2(1000, 530)
+script = ExtResource("4_lbhrr")
+trap_scene = ExtResource("2_yqjtg")
+
+[node name="Timer" type="Timer" parent="TrapSpawner"]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="TrapSpawner/Timer" to="TrapSpawner" method="_on_timer_timeout"]
