@@ -62,7 +62,7 @@ shape = SubResource("RectangleShape2D_8cj0n")
 position = Vector2(1463.5, 527)
 shape = SubResource("RectangleShape2D_8cj0n")
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("1_uwrxv")]
 position = Vector2(858, 385)
 collision_layer = 2
 
