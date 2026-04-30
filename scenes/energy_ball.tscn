@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/energy_ball.gd" id="1_vynh1"]
+[ext_resource type="Texture2D" uid="uid://cp837sklkbu6i" path="res://icon.svg" id="2_omsk7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p57ef"]
+size = Vector2(124, 123)
+
+[node name="energy_ball" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_vynh1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_omsk7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_p57ef")
