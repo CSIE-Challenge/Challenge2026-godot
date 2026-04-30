@@ -2,7 +2,14 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
+@export var max_health := 100
+
+var health = 0
+
 @onready var anim = $AnimatedSprite2D
+
+func _ready() -> void:
+	health = max_health
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -29,3 +36,6 @@ func _physics_process(delta: float) -> void:
 		anim.stop()
 
 	move_and_slide()
+
+func damage(dmg: float):
+	health -= dmg
