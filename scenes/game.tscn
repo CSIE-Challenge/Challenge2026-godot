@@ -76,7 +76,7 @@ script = ExtResource("4_lbhrr")
 trap_scene = ExtResource("2_yqjtg")
 
 [node name="Timer" type="Timer" parent="TrapSpawner"]
-wait_time = 1.5
+wait_time = 5.0
 autostart = true
 
 [connection signal="timeout" from="TrapSpawner/Timer" to="TrapSpawner" method="_on_timer_timeout"]
