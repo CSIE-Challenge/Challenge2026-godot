@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var hit_damage := 10.0
+
 var speed: float = 400.0
 
 func _ready() -> void:
@@ -12,3 +14,7 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		var wall_normal = collision.get_normal()
 		velocity = velocity.bounce(wall_normal)
+		
+		var collider = collision.get_collider()
+		if collider.has_method("damage"):
+			collider.damage(hit_damage)
