@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://n0xoexwsohn5"]
+[gd_scene format=3 uid="uid://n0xoexwsohn5"]
 
-[ext_resource type="Script" uid="uid://dwts357eee5ev" path="res://scenes/game.gd" id="1_lnu2h"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bo8c04xo40bla" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://dv3wbu2kgn81u" path="res://scenes/trap.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" path="res://scenes/trap.tscn" id="2_yqjtg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cj0n"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -17,17 +17,17 @@ size = Vector2(944, 5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cj0n"]
 size = Vector2(5, 914)
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=146878349]
 script = ExtResource("1_lnu2h")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1678391149]
 offset_right = 1920.0
 offset_bottom = 1090.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 color = Color(0.08280001, 0.08770667, 0.23, 1)
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=64618448]
 offset_left = 522.0
 offset_top = 70.0
 offset_right = 1466.0
@@ -36,35 +36,35 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_8cj0n")
 
-[node name="Boundaries" type="Node" parent="."]
+[node name="Boundaries" type="Node" parent="." unique_id=659479314]
 
-[node name="top" type="StaticBody2D" parent="Boundaries"]
+[node name="top" type="StaticBody2D" parent="Boundaries" unique_id=476673265]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/top"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/top" unique_id=1866080008]
 position = Vector2(994.5, 72.5)
 shape = SubResource("RectangleShape2D_uwrxv")
 
-[node name="bottom" type="StaticBody2D" parent="Boundaries"]
+[node name="bottom" type="StaticBody2D" parent="Boundaries" unique_id=1323688529]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/bottom"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/bottom" unique_id=726571808]
 position = Vector2(994, 981.5)
 shape = SubResource("RectangleShape2D_uwrxv")
 
-[node name="Left" type="StaticBody2D" parent="Boundaries"]
+[node name="Left" type="StaticBody2D" parent="Boundaries" unique_id=1111520410]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Left" unique_id=193686003]
 position = Vector2(524.5, 527)
 shape = SubResource("RectangleShape2D_8cj0n")
 
-[node name="Right" type="StaticBody2D" parent="Boundaries"]
+[node name="Right" type="StaticBody2D" parent="Boundaries" unique_id=32739743]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Right" unique_id=445403292]
 position = Vector2(1463.5, 527)
 shape = SubResource("RectangleShape2D_8cj0n")
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+[node name="Player" parent="." unique_id=935020725 instance=ExtResource("1_uwrxv")]
 position = Vector2(858, 385)
 collision_layer = 2
 
-[node name="Trap" parent="." instance=ExtResource("2_yqjtg")]
+[node name="Trap" parent="." unique_id=1492476750 instance=ExtResource("2_yqjtg")]
 position = Vector2(556, 779)

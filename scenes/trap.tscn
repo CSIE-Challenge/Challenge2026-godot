@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv3wbu2kgn81u"]
+[gd_scene format=3 uid="uid://dv3wbu2kgn81u"]
 
 [ext_resource type="Script" uid="uid://cc1qufaearw34" path="res://scenes/trap.gd" id="1_npg1n"]
 
