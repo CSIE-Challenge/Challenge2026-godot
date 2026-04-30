@@ -10,6 +10,7 @@ var health = 0
 
 func _ready() -> void:
 	health = max_health
+	print(health)
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -39,3 +40,4 @@ func _physics_process(delta: float) -> void:
 
 func damage(dmg: float):
 	health -= dmg
+	print(health)
