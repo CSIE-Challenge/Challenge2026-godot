@@ -19,7 +19,7 @@ func _on_timer_timeout() -> void:
         var new_trap = trap_scene.instantiate()
 
         # Define the boundary based on your provided images
-        var x_min = 524.5
+        var x_min = 530.5
         var x_max = 1463.5
         var y_min = 75.5
         var y_max = 981.5
